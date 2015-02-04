@@ -4,6 +4,17 @@
   app.controller('StoreController', function(){
     this.products = gems;
   });
+  
+   app.controller('TabController', function(){
+    this.tab = 1;
+    this.setTab = function(setTab){
+    this.tab = setTab;
+    };
+    this.isSet = function(givenTab){
+      return this.tab === givenTab;
+    };
+  });
+
 
   var gems = [{
       name: 'Azurite',
