@@ -16,6 +16,14 @@
       return this.tab === tabName;
     };
   });
+  
+  app.controller('GalleryController', function(){
+  this.current = 0;
+    this.setCurrent = function(recievedCurrent)
+    {
+      this.current = recievedCurrent || 0;
+    };
+  });
 
   var gems = [
     {
