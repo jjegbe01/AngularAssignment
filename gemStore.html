@@ -51,6 +51,7 @@
             <blockquote>{{product.description}}</blockquote>
           </div>
 
+
           <!--  Spec Tab's Content  -->
           <div ng-show="tab.isSet(2)">
             <h4>Specs</h4>
@@ -59,7 +60,6 @@
 
           <!--  Review Tab's Content  -->
           <div ng-show="tab.isSet(3)">
-
             <!--  Product Reviews List -->
             <ul>
               <h4>Reviews</h4>
@@ -74,16 +74,18 @@
 
             <!--  Review Form -->
             <form name="reviewForm">
+
               <!--  Live Preview -->
-              <blockquote>
+              <blockquote ng-show="review">
                 <strong>{{review.stars}} Stars</strong>
                 {{review.body}}
-  <cite class="clearfix">—{{review.author}}</cite>              </blockquote>
+                <cite class="clearfix">—{{review.author}}</cite>
+              </blockquote>
 
               <!--  Review Form -->
               <h4>Submit a Review</h4>
               <fieldset class="form-group">
-                <select ng-model="review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]"  title="Stars">
+                <select ng-model="review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
                   <option value="">Rate the Product</option>
                 </select>
               </fieldset>
@@ -97,9 +99,7 @@
                 <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
               </fieldset>
             </form>
-
           </div>
-
         </section>
       </div>
     </div>
