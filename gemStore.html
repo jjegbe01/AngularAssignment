@@ -45,9 +45,9 @@
             </li>
           </ul>
 
-          <!--  Description Tab's Content  --><!--  Description Tab's Content  -->
-<div ng-show="tab.isSet(1)" ng-include="'product-description.html'">
-</div>
+          <!--  Description Tab's Content  -->
+          <product-description ng-show="tab.isSet(1)"></product-description>
+          </div>
 
           <!--  Spec Tab's Content  -->
           <div ng-show="tab.isSet(2)">
@@ -110,10 +110,8 @@
               </fieldset>
             </form>
           </div>
-
         </section>
       </div>
-
     </div>
   </body>
 </html>
